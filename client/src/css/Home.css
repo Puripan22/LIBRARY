@@ -1,0 +1,51 @@
+.home-container{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+}
+.Navbar-container{
+    height: 100%;
+    background-color: blue;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+/*.Navbar{
+    
+}*/
+.home-page{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: bisque;
+    width: 75%;
+}
+.search{
+    height: 20%;
+    width: 100%;
+}
+.book-component{
+    display: flex;
+    width: 100%;
+    height: 45%;
+}
+.book-days{
+    width: 50%;
+}
+.right-book-component{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.author{
+    height: 50%;
+}
+.new-book{
+    height: 50%;
+}
+.popular{
+    width: 100%;
+    display: flex;
+    height: 35%;
+}
