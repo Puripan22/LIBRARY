@@ -8,6 +8,7 @@ import Bookmark from './pages/Bookmark'
 import Category from './pages/Category'
 import History from './pages/History'
 import Payment from './pages/Payment'
+import Search from './pages/Search'
 
 function App() {
   
@@ -22,6 +23,7 @@ function App() {
         <Route path='/category' element={<Category/>}/>
         <Route path='/history' element={<History/>}/>
         <Route path='/payment' element={<Payment/>}/>
+        <Route path='/search' element={<Search/>}/>
       </Routes>
     </BrowserRouter>
   )
