@@ -21,6 +21,7 @@ client/
 │   │   ├── Home.jsx
 │   │   ├── Login.jsx
 │   │   └── Payment.jsx
+│   │   └── Search.jsx
 │   ├── App.css         # Global CSS styles
 │   ├── App.jsx         # Main React application component
 │   ├── index.css       # Additional CSS styles
