@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
-const {upload} = require('../controller/book')
+const {upload, book_table} = require('../controller/book')
 const { requireLogin } = require('../middleware/middleware')
-router.post('/upload',requireLogin,upload)
-
+router.post('/upload',upload)
+router.get('/book_table',book_table)
 module.exports = router
