@@ -1,6 +1,6 @@
 // const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
 const connection = require('../database/database')
-
+const jwt = require('jsonwebtoken')
 const login = async (req, res) => {
    const db = await connection()
    try{
@@ -15,7 +15,14 @@ const login = async (req, res) => {
         const password = student[0].password
 
         if(passworD == password){
-          return res.json(student)
+          const token = jwt.sign({student_id:student[0].student_id},process.env.JWT_SECRET,{
+            expiresIn:"7d"
+          })
+          const {password,...rest} = student[0]
+          return res.json({
+            token,
+            user:rest,
+          })
         }else{
           return res.json('password not correct!')
         }
