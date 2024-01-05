@@ -3,7 +3,7 @@ import axios from 'axios'
 import {useNavigate} from "react-router-dom"
 import {UserContext} from "../../context/index"
 import '../css/login.css'
-import library3 from "../../image/libray03.jpg"
+import image01 from "../../image/admin01.jpg"
 function Login() {
   const [username,setUsername] = useState('')
   const [password,setPassword] = useState('')
@@ -37,9 +37,8 @@ function Login() {
     
         <div className='left-login'>
           <div className="text-image-login">
-            <h1>Library for everyone</h1>
           </div>
-          <img src={library3} className='login01-img' ></img>
+          <img src={image01} className='login01-img' ></img>
         </div>
         <div className='right-login'>
             <h1 className="head-login">Login</h1>

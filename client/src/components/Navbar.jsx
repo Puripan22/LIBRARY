@@ -1,6 +1,6 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import { Link } from 'react-router-dom';
-
+import { UserContext } from '../../context';
 export default function Navbar() {
   const list_item = [
     {
@@ -21,6 +21,11 @@ export default function Navbar() {
     },
   ];
 
+  const [state,setState] = useContext(UserContext)
+  const handleLogout = ()=>{
+    setState({user:{},token:""})
+    localStorage.removeItem('auth')
+  }
   return (
     <nav>
       <ul>
@@ -29,6 +34,7 @@ export default function Navbar() {
             <Link to={item.path}>{item.name}</Link>
           </li>
         ))}
+        <li>{state.token ? (<button onClick={handleLogout}>logout</button>):""}</li>
       </ul>
     </nav>
   );
