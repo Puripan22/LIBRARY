@@ -2,6 +2,8 @@ import React, { useContext, useState } from 'react'
 import axios from 'axios'
 import {useNavigate} from "react-router-dom"
 import {UserContext} from "../../context/index"
+import '../css/login.css'
+import library3 from "../../image/libray03.jpg"
 function Login() {
   const [username,setUsername] = useState('')
   const [password,setPassword] = useState('')
@@ -31,30 +33,38 @@ function Login() {
   }
 
   return (
-    <div className='flex justify-center items-center h-screen'>
-    <div className="container flex items-center">
-        <div className='flex flex-col md:w-1/2 md:mx-auto text-center'>
-            <h1 className="pt-5 font-bold text-3xl">Login</h1>
-            <p className="text-lg pb-4">
+    <div className="login-container">
+    
+        <div className='left-login'>
+          <div className="text-image-login">
+            <h1>Library for everyone</h1>
+          </div>
+          <img src={library3} className='login01-img' ></img>
+        </div>
+        <div className='right-login'>
+            <h1 className="head-login">Login</h1>
+            <p className="text01-login">
                 Access your subscriptions. Anytime. Anywhere.
             </p>
 
             <div className='mb-4'>
-                <label className='block text-sm font-semibold text-gray-600'>username</label>
+                
                 <input
                     className='w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-500'
                     type="text"
                     value={username}
+                    placeholder='username'
                     onChange={(e) => setUsername(e.target.value)}
                 />
             </div>
 
             <div className='mb-4'>
-                <label className='block text-sm font-semibold text-gray-600'>Password</label>
+                
                 <input
                     className='w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-500'
                     type="password"
                     value={password}
+                    placeholder='password'
                     onChange={(e) => setPassword(e.target.value)}
                 />
             </div>
@@ -70,7 +80,6 @@ function Login() {
             </div>
         </div>
     </div>
-</div>
 
   )
 }
