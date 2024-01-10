@@ -48,11 +48,11 @@ function Book_table() {
   };
 
   return (
-    <div className="flex h-screen w-screen overflow-y-scroll">
+    <div className="flex h-screen w-screen ">
       <Navbar />
-      <div className="sm:ml-64 w-full ">
+      <div className="w-full overflow-y-scroll">
         <Search/>
-        <div className="relative overflow-auto w-full h-full">
+        <div className="relative w-full h-full ">
           <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
             <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
               <tr>
@@ -77,14 +77,14 @@ function Book_table() {
             <tbody>
               {data.map((dataItem) => (
                 <tr
-                  className="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+                  className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 h-32"
                   key={dataItem.book_id}
                 >
                   <th
                     scope="row"
                     className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                   >
-                    <img src={dataItem.imageUrls} className="w-32 h-full" alt={dataItem.title} />
+                    <img src={dataItem.imageUrls} className="w-16 h-full" alt={dataItem.title} />
                   </th>
                   <td className="px-6 py-4">
                     <p>{dataItem.book_id}</p>
