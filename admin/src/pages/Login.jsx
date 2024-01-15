@@ -1,13 +1,12 @@
 import React, { useContext, useState } from 'react'
 import axios from 'axios'
 import {useNavigate} from "react-router-dom"
-import {UserContext} from "../../context/index"
 import '../css/login.css'
-import image01 from "../../image/admin01.jpg"
+import image01 from "../image/admin01.jpg"
 function Login() {
   const [username,setUsername] = useState('')
   const [password,setPassword] = useState('')
-  const [state,setState] = useContext(UserContext)
+  
   const navigate = useNavigate()
 
   const handleClick = async(e)=>{
@@ -22,7 +21,7 @@ function Login() {
       }else{
         setUsername('')
         setPassword('')
-        setState(data)
+        
         localStorage.setItem('auth',JSON.stringify(data))
         navigate('/')
       }
