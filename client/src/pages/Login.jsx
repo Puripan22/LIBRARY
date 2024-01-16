@@ -42,41 +42,36 @@ function Login() {
           <img src={library3} className='login01-img' ></img>
         </div>
         <div className='right-login'>
+            <div className="box-text">
             <h1 className="head-login">Login</h1>
             <p className="text01-login">
                 Access your subscriptions. Anytime. Anywhere.
             </p>
+            </div>
 
-            <div className='mb-4'>
-                
+            <div className="box-login">            
                 <input
-                    className='w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-500'
+                    className='mb-4'
                     type="text"
                     value={username}
                     placeholder='username'
                     onChange={(e) => setUsername(e.target.value)}
-                />
-            </div>
-
-            <div className='mb-4'>
-                
+                />  
                 <input
-                    className='w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-500'
+                    className='mb-4'
                     type="password"
                     value={password}
                     placeholder='password'
                     onChange={(e) => setPassword(e.target.value)}
                 />
-            </div>
-
-            <div className="grid">
+                <div className="box_button_login">
                 <button
-                    className='w-full px-4 py-2 font-semibold text-white bg-red-500 rounded-md focus:outline-none hover:bg-red-600'
+                    className='button-login'
                     onClick={handleClick}
-                    type="button"
-                >
+                    type="button" >
                     Login
                 </button>
+                </div>
             </div>
         </div>
     </div>
