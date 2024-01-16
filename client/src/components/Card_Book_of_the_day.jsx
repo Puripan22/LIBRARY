@@ -26,7 +26,7 @@ function Card_Book_of_the_day() {
             with the appearance of Voldemort's symbol, the "Dark Mark" in the
             sky, which causes a frenzy across the magical community. 
           </p>
-          <a href="/book_detail" className=" bg-orange-400 p-2 w-28 rounded-md">detail</a>
+          <a href="/book_detail" className=" bg-orange-400 p-2 w-1/4 rounded-md">detail</a>
         </div>
       </div>
     </div>
