@@ -21,7 +21,7 @@ function Book_datail() {
             </h6>
             <div className=" flex items-center gap-x-5">
             
-              <div className=" flex">
+              <div className=" flex hover:scale-125">
                 <button className=" bg-black p-3 w-32 rounded-md flex justify-around items-center">
                   <p className=" text-white">Go book</p>
                   <div>
