@@ -64,7 +64,7 @@ function Login() {
                     placeholder='password'
                     onChange={(e) => setPassword(e.target.value)}
                 />
-                <div className="box_button_login">
+                <div className="box_button_login hover:scale-125">
                 <button
                     className='button-login'
                     onClick={handleClick}
