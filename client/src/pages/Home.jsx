@@ -7,7 +7,7 @@ import Author from "../components/Author";
 import Card_Popular_books from "../components/Card_Popular_books";
 function Home() {
   return (
-    <div className="flex h-screen w-screen">
+    <div className="flex h-screen w-screen fixed">
       <Navbar />
       
         

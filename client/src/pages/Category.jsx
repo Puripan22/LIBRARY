@@ -2,7 +2,6 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import Card_book_category from '../components/Card_book_category'
 
-
 function Category() {
 
   const data1 = {
@@ -87,10 +86,10 @@ function Category() {
   
 
   return (
-    <div className="flex h-screen w-screen">
+    <div className="flex h-screen w-screen fixed">
        <Navbar/>
-
       <div className="flex flex-col">
+
         {data0.map((book, index) => (<div className="h-1/3 w-full" key={index}>
           <Card_book_category data={book.data} category={book.category}/>
         </div>))}
