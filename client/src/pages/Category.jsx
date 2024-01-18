@@ -70,7 +70,24 @@ function Category() {
       author:"by Peter Lynch"
     },
   ];
+
+  const words1 = [
+    {
+      text: "fiction books"
+    },
+  ];
+  const words2 = [
+    {
+      text: "business books"
+    },
+  ];
+  const words3 = [
+    {
+      text: "comedy book"
+    },
+  ];
   const data0 = [data1,data2,data3]
+  const words = [words1,words2,words3]
 
   return (
     <div className="flex h-screen w-screen">

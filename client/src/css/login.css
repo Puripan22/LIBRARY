@@ -80,6 +80,9 @@
     justify-content: center;
     align-items: center;
 }
+.box_button_login:hover{
+    transform: scale(125%);
+}
 .button-login{
     color: white;
     text-align: center;
