@@ -4,6 +4,7 @@ import Card_book_category from '../components/Card_book_category'
 
 
 function Category() {
+
   const data1 = {
     category:"Investment",
     data:
@@ -81,7 +82,9 @@ function Category() {
       },
     ]
   }
+
   const data0 = [data1,data2,data3]
+  
 
   return (
     <div className="flex h-screen w-screen">

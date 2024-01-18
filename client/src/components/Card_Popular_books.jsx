@@ -32,7 +32,7 @@ function Card_Popular_books() {
       {data.map((book, index) => (
         <div key={index}  className=" h-full w-1/4 flex justify-center items-center bg-white border-2 border-gray-200 rounded-lg shadow p-2">
           <img
-            className="object-cover rounded-lg h-36"
+            className="object-cover rounded-lg h-36 hover:scale-110"
             src={book.src}
             alt=""
           />
@@ -42,7 +42,7 @@ function Card_Popular_books() {
               {book.title}
             </h6>
             <p>{book.author}</p>
-            <button className=" bg-orange-400 p-2 w-1/2 rounded-md">
+            <button className=" bg-orange-400 p-2 w-1/2 rounded-md hover:scale-110">
               read
             </button>
           </div>

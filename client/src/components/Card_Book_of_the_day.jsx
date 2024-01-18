@@ -6,7 +6,7 @@ function Card_Book_of_the_day() {
     <div className="p-2 w-2/3 h-full bg-red-300">
       <div className="w-full h-full flex  items-center bg-white border-2 border-gray-200 rounded-lg shadow p-5">
         <img
-          className="object-cover w-full rounded-lg h-full"
+          className="object-cover w-full rounded-lg h-full hover:scale-110"
           src="https://media.harrypotterfanzone.com/goblet-of-fire-uk-childrens-edition-2014.jpg"
           alt=""
         />
@@ -26,7 +26,7 @@ function Card_Book_of_the_day() {
             with the appearance of Voldemort's symbol, the "Dark Mark" in the
             sky, which causes a frenzy across the magical community. 
           </p>
-          <a href="/book_detail" className=" bg-orange-400 p-2 w-1/4 rounded-md">detail</a>
+          <a href="/book_detail" className=" bg-orange-400 p-2 w-1/4 rounded-md hover:scale-110 text-center">detail</a>
         </div>
       </div>
     </div>
