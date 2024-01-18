@@ -3,8 +3,12 @@ import Rating from "./Rating";
 
 export default function Card_book_category(props) {
     const data=props.data
+    const category=props.category
   return (
     <div className=" bg-green-400 h-full w-full flex flex-col border border-gray-300">
+
+      <p className="p-2 font-bold">{category}</p>
+
       <div className=" w-full h-full flex gap-x-4 p-2">
       {data.map((book, index) => (
         <div key={index}  className=" h-full w-1/4 flex justify-center items-center bg-white border-2 border-gray-200 rounded-lg shadow p-2">
