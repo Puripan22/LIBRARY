@@ -10,7 +10,8 @@ function History() {
         title: "The Wager: A Tale of Shipwreck, Mutiny and Murder",
         author:"by David Grann",
         date: "12/12/2024",
-        time: "12.00"
+        time: "12.00",
+        status: "available"
       }
     ];
   const data2 = [
@@ -19,7 +20,8 @@ function History() {
         title: "The Old Man and the Gun: And Other Tales of True Crime",
         author:"by David Grann",
         date: "12/12/2024",
-        time: "12.00"
+        time: "12.00",
+        status: "borrowed"
       }
     ];
   const data3  = [ 
@@ -28,7 +30,8 @@ function History() {
         title: "intelligent investor",
         author:"benjamin graham",
         date: "12/12/2024",
-        time: "12.00"
+        time: "12.00",
+        status: "available"
       }
     ];
   const data4 = [  
@@ -37,7 +40,8 @@ function History() {
         title: "One Up on Wall Street",
         author:"by Peter Lynch",
         date: "12/12/2024",
-        time: "12.00"
+        time: "12.00",
+        status: "borrowed"
       }
     ];
     const data5 = [  
@@ -46,7 +50,8 @@ function History() {
         title: "One Up on Wall Street",
         author:"by Peter Lynch",
         date: "12/12/2024",
-        time: "12.00"
+        time: "12.00",
+        status: "available"
       }
     ];
     const data6  = [ 
@@ -55,7 +60,8 @@ function History() {
         title: "intelligent investor",
         author:"benjamin graham",
         date: "12/12/2024",
-        time: "12.00"
+        time: "12.00",
+        status: "borrowed"
       }
     ];
 

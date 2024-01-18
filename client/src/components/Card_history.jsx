@@ -44,7 +44,7 @@ export default function Card_history(props) {
           </div>
           <div className="flex flex-col pl-11">
             <h6 className="text-gray-500">Status</h6>
-            <h6 className="font-bold pt-2 text-lg font-serif text-blue-700">borrowed</h6>
+            <h6 className="font-bold pt-2 text-lg font-serif text-blue-700">{book.status}</h6> {/*available*/}
           </div>
           </div>
           </div>
