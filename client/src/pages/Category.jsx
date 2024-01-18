@@ -2,8 +2,8 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import Card_book_category from '../components/Card_book_category'
 
-
 function Category() {
+  
   const data1 = [
     {
       src: "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B600%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&source=url%5Bhttps://prodimage.images-bn.com/pimages/9780385534260_p0_v2_s600x595.jpg%5D&scale=options%5Blimit%5D,size%5B600x10000%5D&sink=format%5Bwebp%5D",
@@ -50,22 +50,22 @@ function Category() {
   ];
   const data3 = [
     {
-      src: "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B600%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&source=url%5Bhttps://prodimage.images-bn.com/pimages/9780385534260_p0_v2_s600x595.jpg%5D&scale=options%5Blimit%5D,size%5B600x10000%5D&sink=format%5Bwebp%5D",
+      src: "https://img.readthistwice.com/unsafe/240x360/books/ce40f40a-de48-49a1-b559-1f76c7b5c3e7.jpg",
       title: "The Wager: A Tale of Shipwreck, Mutiny and Murder",
       author:"by David Grann"
     },
     {
-      src: "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&source=url%5Bhttps://prodimage.images-bn.com/pimages/9780525566038_p0_v1_s600x595.jpg%5D&scale=options%5Blimit%5D,size%5B300x10000%5D&sink=format%5Bwebp%5D",
+      src: "https://m.media-amazon.com/images/I/91cH3iahx2L._AC_UF1000,1000_QL80_.jpg",
       title: "The Old Man and the Gun: And Other Tales of True Crime",
       author:"by David Grann"
     },
     {
-      src: "https://media.tarad.com/p/peang22-jatujak/img-lib/spd_20170522164101_b.jpg",
+      src: "https://mpd-biblio-covers.imgix.net/9780374604721.jpg",
       title: "intelligent investor",
       author:"benjamin graham"
     },
     {
-      src: "https://m.media-amazon.com/images/I/81O-dMP4VcL._AC_UF1000,1000_QL80_.jpg",
+      src: "https://images.penguinrandomhouse.com/cover/9780399180538",
       title: "One Up on Wall Street",
       author:"by Peter Lynch"
     },
@@ -90,13 +90,15 @@ function Category() {
   const words = [words1,words2,words3]
 
   return (
-    <div className="flex h-screen w-screen">
+    <div className="flex h-screen w-screen fixed">
        <Navbar/>
-
       <div className="flex flex-col">
-        {data0.map((book, index) => (<div className="h-1/3 w-full" key={index}>
+        {data0.map((book, index) => ( 
+        
+        <div className="h-1/3 w-full" key={index}>
           <Card_book_category data={book}/>
-        </div>))}
+        </div> 
+        ))}
       </div>
     </div>
   )
