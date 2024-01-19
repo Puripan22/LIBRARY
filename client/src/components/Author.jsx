@@ -111,7 +111,7 @@ function Author() {
         {data.map((ebook, index) => (
           <div
             key={index}
-            className="h-4/5 w-24 flex flex-col justify-center items-center bg-white border-2 border-gray-200 rounded-lg shadow p-2"
+            className="h-4/5 w-24 flex flex-col justify-center items-center bg-white border-2 border-gray-200 rounded-lg shadow p-2 cursor-pointer"
             onClick={() => setOpenModal(true)}
           >
             <img

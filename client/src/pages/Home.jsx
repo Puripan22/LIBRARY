@@ -9,22 +9,20 @@ function Home() {
   return (
     <div className="flex h-screen w-screen fixed">
       <Navbar />
-      
-        
-        <div className="flex flex-col w-full h-full p-4">
+
+      <div className="flex flex-col w-full h-full p-4">
         <Search />
-          <div className="flex w-full h-3/5">
-            <Card_Book_of_the_day />
-            <div className="flex flex-col w-1/3">
-              <Author />
-              <Card_Book_new />
-            </div>
-          </div>
-          <div className=" w-full h-2/5">
-            <Card_Popular_books />
+        <div className="flex w-full h-3/5">
+          <Card_Book_of_the_day />
+          <div className="flex flex-col w-1/3">
+            <Author />
+            <Card_Book_new />
           </div>
         </div>
-      
+        <div className=" w-full h-2/5">
+          <Card_Popular_books />
+        </div>
+      </div>
     </div>
   );
 }
