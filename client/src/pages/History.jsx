@@ -76,7 +76,7 @@ function History() {
           <Search_History />
         </div>
         {data.map((book, index) => (
-          <div key={index} className=" w-full h-1/4 flex flex-col">
+          <div key={index} className=" w-full h-2/6 flex flex-col">
             <Card_history data={book} />
           </div>
         ))}
