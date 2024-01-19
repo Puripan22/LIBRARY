@@ -12,7 +12,7 @@ function Card_Book_of_the_day() {
         />
         <div className="flex flex-col justify-between pl-5 leading-normal h-full">
           <h7 className="font-bold">Book of the Day</h7>
-          <Rating/>
+          <Rating />
           <h6 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             Harry Potter and the Goblet of Fire
           </h6>
@@ -24,9 +24,14 @@ function Card_Book_of_the_day() {
             match is over, people dressed like Lord Voldemort's (Ralph Fiennes')
             "Death Eaters" set a fire to all of the visitors' tents, coupled
             with the appearance of Voldemort's symbol, the "Dark Mark" in the
-            sky, which causes a frenzy across the magical community. 
+            sky, which causes a frenzy across the magical community.
           </p>
-          <a href="/book_detail" className=" bg-orange-400 p-2 w-1/4 rounded-md hover:scale-110 text-center">detail</a>
+          <a
+            href="/book_detail"
+            className=" bg-orange-400 p-2 w-1/4 rounded-md hover:scale-110 text-center"
+          >
+            detail
+          </a>
         </div>
       </div>
     </div>

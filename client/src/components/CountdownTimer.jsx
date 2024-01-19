@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 const CountdownTimer = ({ targetTime }) => {
   const [timeRemaining, setTimeRemaining] = useState(calculateTimeRemaining());
@@ -11,7 +11,7 @@ const CountdownTimer = ({ targetTime }) => {
     return () => {
       clearInterval(intervalId);
     };
-  }, []); 
+  }, []);
 
   function calculateTimeRemaining() {
     const now = new Date().getTime();
@@ -19,7 +19,9 @@ const CountdownTimer = ({ targetTime }) => {
     const difference = target - now;
 
     const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const hours = Math.floor(
+      (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
     const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
