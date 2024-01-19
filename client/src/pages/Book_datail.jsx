@@ -15,12 +15,11 @@ function Book_datail() {
             alt=""
           />
           <div className="flex flex-col gap-y-4 pl-5 leading-normal h-full justify-center">
-          <Rating />
+            <Rating />
             <h6 className="mb-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white flex  ">
-              Harry Potter and the Goblet of Fire 
+              Harry Potter and the Goblet of Fire
             </h6>
             <div className=" flex items-center gap-x-5">
-            
               <div className=" flex hover:scale-125">
                 <button className=" bg-black p-3 w-32 rounded-md flex justify-around items-center">
                   <p className=" text-white">Go book</p>
