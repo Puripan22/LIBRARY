@@ -6,6 +6,14 @@ const upload = async (req, res) => {
   try {
     const { book_id, title, author, category, description, imageUrls, isbn, currentDate } = req.body;
 
+    // Check if book_id already exists in the book_detail table
+    const [existingBook] = await db.query('SELECT * FROM book_detail WHERE book_id = ?', [book_id]);
+
+    if (existingBook.length > 0) {
+      // If book_id already exists, return an error response
+      return res.status(400).json({ error: 'Book with the same ID already exists.' });
+    }
+
     // Ensure placeholders match the actual columns in the book_detail table
     const [book_image] = await db.query(
       'INSERT INTO book_detail (book_id, title, author, category, description, imageUrls) VALUES (?, ?, ?, ?, ?, ?)',
@@ -23,6 +31,7 @@ const upload = async (req, res) => {
 };
 
 
+
 const book_table = async (req, res) => {
   const db = await connection();
 
@@ -32,6 +41,7 @@ const book_table = async (req, res) => {
         book_detail.book_id,
         book_detail.title,
         book_detail.imageUrls,
+        book_detail.category,
         COUNT(*) AS volume
       FROM 
         book_detail
@@ -40,9 +50,10 @@ const book_table = async (req, res) => {
       GROUP BY 
         book_detail.book_id
     `);
+    const [category_list] = await db.query(`select category from book_detail group by category`)
 
     // Send the response to the client
-    res.json( book_table );
+    res.json( {book_table ,category_list});
   } catch (err) {
     // Log the error for debugging purposes
     console.error(err);

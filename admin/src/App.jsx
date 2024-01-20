@@ -5,7 +5,7 @@ import New_book from './pages/New_book'
 import Dashboard from './pages/Dashboard'
 import Login from './pages/Login'
 import Edit_book from './pages/Edit_book'
-import Book_table from './pages/Book_table'
+import Book from './pages/Book'
 import Scan_booking from './pages/Scan_booking'
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
         <Route path='/' element={<Dashboard/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/edit/:book_id' element={<Edit_book/>}/>
-        <Route path='/book_table' element={<Book_table/>}/>
+        <Route path='/book_table' element={<Book/>}/>
         <Route path='/scan' element={<Scan_booking/>}/>
       </Routes>
     </BrowserRouter>
