@@ -8,6 +8,7 @@ export default function Card_history(props) {
   const data = props.data;
   const targetTime = new Date().getTime() + 334 * 60 * 60 * 24;
   const [openModal, setOpenModal] = useState(false);
+
   return (
     /*<div className="flex flex-col">
             <p>Artist Name</p>
@@ -16,15 +17,15 @@ export default function Card_history(props) {
           </h6>
           </div>*/
     <div className=" w-screen h-screen flex flex-col pt-4 ">
-      <div className=" w-full h-full flex flex-col ">
+      <div className=" w-full h-full flex flex-col border-2 border-solid border-blue-200 border-spacing-2 rounded-lg">
         {data.map((book, index) => (
           <div
             key={index}
-            className=" h-3/5 w-full flex  bg-white border-2  border-solid border-blue-200 rounded-tl-lg rounded-tr-lg shadow p-2 hover:scale-105  "
+            className=" h-3/5 w-full flex  bg-white border-2  rounded-tl-lg rounded-tr-lg p-2 hover:scale-105 border-solid border-blue-200 border-spacing-2 border-t-0 border-l-0 border-r-0 "
           >
             <div className=" flex w-1/2 items-center pl-11">
               <img
-                className="object-cover h-36 hover:scale-125 rounded-md"
+                className="object-cover h-28 hover:scale-125 rounded-md"
                 src={book.src}
                 alt=""
               />
@@ -296,14 +297,14 @@ export default function Card_history(props) {
             <div className=" h-12 w-36 border-2 border-solid  border-black text-center rounded-lg bg-slate-200 ">
               <button
                 type="submit"
-                class="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-black bg-primary-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800"
+                class=" h-full w-full justify-center inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-black  rounded-lg focus:ring-4 focus:ring-primary-200 "
               >
                 Post comment
               </button>
             </div>
           </Modal.Footer>
         </Modal>
-        <div className=" h-2/5 w-full flex  border-t-0 border-2 border-solid border-blue-200 border-spacing-2 rounded-lg">
+        <div className=" h-2/5 w-full flex  ">
           <div
             onClick={() => setOpenModal(true)}
             className=" h-full flex w-1/2 justify-center items-center  cursor-pointer hover:scale-105 "
