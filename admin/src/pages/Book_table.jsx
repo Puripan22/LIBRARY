@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
 import Search from "../components/Search";
 function Book_table() {
   const [data, setData] = useState([]);
+  const [selectCategory,setSelectCategory] = useState('All category')
   const fetch = async () => {
     try {
       const response = await axios.get("http://localhost:8080/api/book_table");

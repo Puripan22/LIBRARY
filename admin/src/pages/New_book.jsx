@@ -156,6 +156,9 @@ function New_book() {
                 <option value="fiction">Fiction</option>
                 <option value="non-fiction">Non-Fiction</option>
                 <option value="sci-fi">Sci-Fi</option>
+                <option value="business">Business</option>
+                <option value="history">History</option>
+                <option value="computer&tech">Computer & Tech</option>
               </select>
             </div>
           </div>
