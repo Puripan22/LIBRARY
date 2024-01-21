@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import Navbar from "../components/Navbar";
-import Card_booking_history from "../components/History/Card_booking_history";
+import Card_booking_history from "../components/Card_booking_history";
 import axios from "axios";
 import { UserContext } from "../../context";
 function History() {
