@@ -3,9 +3,9 @@ import { UserContext } from "./index";
 import React,{useContext, useState} from "react";
 
 const Middleware =({children})=>{
-    const [contextState,setState] = useContext(UserContext)
+    const {state,setState} = useContext(UserContext)
     const location = useLocation()
-    if(!contextState){
+    if(!state){
         return <Navigate to='/login' state={{from:location}}/>
     }
     return children

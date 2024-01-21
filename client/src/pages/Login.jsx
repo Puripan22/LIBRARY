@@ -7,7 +7,7 @@ import library3 from "../../image/libray03.jpg";
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [state, setState] = useContext(UserContext);
+  const {state, setState} = useContext(UserContext);
   const navigate = useNavigate();
 
   const handleClick = async (e) => {

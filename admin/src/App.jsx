@@ -7,6 +7,8 @@ import Login from './pages/Login'
 import Edit_book from './pages/Edit_book'
 import Book from './pages/Book'
 import Scan_booking from './pages/Scan_booking'
+import Booking from './pages/Booking'
+import Renew from './pages/Renew'
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <Route path='/edit/:book_id' element={<Edit_book/>}/>
         <Route path='/book_table' element={<Book/>}/>
         <Route path='/scan' element={<Scan_booking/>}/>
+        <Route path='/booking' element={<Booking/>}/>
+        <Route path='/renew' element={<Renew/>}/>
       </Routes>
     </BrowserRouter>
   )

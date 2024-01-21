@@ -1,13 +1,15 @@
 import React from "react";
-import { useState } from "react";
-
+import { useState ,useContext} from "react";
+import { UserContext } from "../../../context";
 export default function Rating_History() {
-  const [rating, setRating] = useState();
+  const {rating, setRating} = useContext(UserContext);
+  
   const handleClick = (newRating) => {
+    console.log(newRating)
     setRating(newRating);
   };
   return (
-    <div class="flex items-center">
+    <div className="flex items-center">
       {[1, 2, 3, 4, 5].map((index) => (
         <label className=" cursor-pointer" key={index}>
           <input
@@ -33,13 +35,13 @@ export default function Rating_History() {
           </svg>
         </label>
       ))}
-      <p class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">
+      <p className="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">
         {rating}
       </p>
-      <p class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">
+      <p className="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">
         out of
       </p>
-      <p class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">5</p>
+      <p className="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">5</p>
     </div>
   );
 }
