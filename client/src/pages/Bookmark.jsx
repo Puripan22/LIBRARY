@@ -87,7 +87,7 @@ function Bookmark() {
   return (
     <div className="flex h-screen w-screen fixed">
        <Navbar/>
-      <div className="flex flex-col">
+      <div className="flex flex-col h-full w-full">
 
         {data0.map((book, index) => (<div className="h-1/3 w-full" key={index}>
           <Card_book_bookmark data={book.data} category={book.category}/>
