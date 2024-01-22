@@ -105,7 +105,7 @@ function Dashboard() {
                 </div>
               </div>
             </div>
-            <div class="grid grid-cols-2 gap-4 mb-4 p-12">
+            <div class="grid grid-cols-2 gap-4 mb-4 p-12 pt-0">
               <div class="flex items-center rounded h-2/3 w-full">
                 <div className=" w-3/4 h-full ">
                   <Chart1 />
@@ -117,7 +117,7 @@ function Dashboard() {
                 </div>
               </div>
               <div class="flex items-center justify-center rounded h-3/4 w-full pt-8">
-                <div class="flex h-full w-full bg-white p-4">
+                <div class="flex h-full w-full bg-white p-4 rounded-lg">
                   <div class="flex flex-col h-full w-full">
                     <h4 class="font-bold text-lg ">List Status</h4>
                     <div class="flex flex-col h-full w-full pt-4">
@@ -210,7 +210,7 @@ function Dashboard() {
                   </div>
                 </div>
               </div>
-              <div class="flex items-center justify-center rounded ">
+              {/*<div class="flex items-center justify-center rounded ">
                 <p class="text-2xl text-gray-400 dark:text-gray-500">
                   <svg
                     class="w-3.5 h-3.5"
@@ -344,7 +344,7 @@ function Dashboard() {
                     />
                   </svg>
                 </p>
-              </div>
+              </div>*/}
             </div>
           </div>
         </div>

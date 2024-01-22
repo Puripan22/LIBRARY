@@ -34,9 +34,9 @@ function History() {
   }, [state && state.user && state.user.student_id]);
 
   return (
-    <div className="flex h-screen w-screen ">
+    <div className="flex h-screen w-screen fixed overflow-none">
       <Navbar />
-      <div className="w-full overflow-y-scroll">
+      <div className="w-full overflow-y-none ">
         <div className="w-full p-4">
           <form>
             <div className="flex w-full">

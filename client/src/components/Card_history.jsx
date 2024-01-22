@@ -17,11 +17,11 @@ export default function Card_history(props) {
           </h6>
           </div>*/
     <div className=" w-screen h-screen flex flex-col pt-4 ">
-      <div className=" w-full h-full flex flex-col border-2 border-solid border-blue-200 border-spacing-2 rounded-lg">
+      <div className=" w-full h-full flex flex-col border-2 border-solid border-blue-200 border-spacing-2 rounded-lg ">
         {data.map((book, index) => (
           <div
             key={index}
-            className=" h-3/5 w-full flex  bg-white border-2  rounded-tl-lg rounded-tr-lg p-2 border-solid border-blue-200 border-spacing-2 border-t-0 border-l-0 border-r-0 "
+            className=" h-3/5 w-full flex  bg-white border-2  rounded-tl-lg rounded-tr-lg p-2 border-solid border-blue-200 border-spacing-2 border-t-0 border-l-0 border-r-0  "
           >
             <div className=" flex w-1/2 items-center pl-11">
               <img
