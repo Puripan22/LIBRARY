@@ -1,7 +1,5 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import CardItem from "../components/CardItem";
-import Chart1 from "../components/Chart1";
 function Dashboard() {
   return (
     <div className="flex h-screen w-screen ">
