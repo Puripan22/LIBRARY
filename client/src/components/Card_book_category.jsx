@@ -2,10 +2,17 @@ import React from "react";
 import Rating from "./Rating";
 import { useState } from "react";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function Card_book_category(props) {
   const data = props.data;
   const category = props.category;
+  const filteredData =
+    data.category === category
+      ? data
+      : data.filter((item) => item.category === category);
+  
+  
   const [count, setCount] = useState(1);
   const [scrollPosition, setScrollPosition] = useState(0);
   const stepSize = 250;
@@ -30,9 +37,6 @@ export default function Card_book_category(props) {
     }
   };
 
-  useEffect(() => {
-    console.log("Count:", count);
-  }, [count]);
   return (
     <div className=" bg-green-400 h-full w-full flex flex-col border border-gray-300 overflow-hidden">
       <div className="flex">
@@ -79,28 +83,32 @@ export default function Card_book_category(props) {
         className=" w-full h-full flex gap-x-4 p-2 transition-transform ease-in-out transform"
         style={{ transform: `translateX(${scrollPosition}px)` }}
       >
-        {data.map((book, index) => (
-          <div
-            key={index}
-            className=" h-full w-1/5 flex justify-center flex-shrink-0 items-center bg-white border-2 border-gray-200 rounded-lg shadow p-2"
-          >
-            <img
-              className="object-cover rounded-lg h-36 hover:scale-110"
-              src={book.src}
-              alt=""
-            />
-            <div className="flex flex-col w-full justify-between p-2 leading-normal h-full">
-              <Rating />
-              <h6 className=" text-lg font-bold tracking-tight text-gray-900 dark:text-white overflow-hidden line-clamp-1">
-                {book.title}
-              </h6>
-              <p>{book.author}</p>
-              <button className=" bg-orange-400 p-2 w-1/2 rounded-md hover:scale-110">
-                read
-              </button>
+        {filteredData ? (
+          filteredData.map((book, index) => (
+            <div
+              key={index}
+              className=" h-full w-1/4 flex justify-center flex-shrink-0 items-center bg-white border-2 border-gray-200 rounded-lg shadow p-2"
+            >
+              <img
+                className="object-cover rounded-lg h-36 hover:scale-110"
+                src={book.imageUrls}
+                alt=""
+              />
+              <div className="flex flex-col w-full justify-between p-2 leading-normal h-full">
+                <Rating />
+                <h6 className=" text-lg font-bold tracking-tight text-gray-900 dark:text-white overflow-hidden line-clamp-1">
+                  {book.title}
+                </h6>
+                <p>{book.author}</p>
+                <Link to={`/book_detail/${book.book_id}`} className=" bg-orange-400 p-2 w-1/2 rounded-md hover:scale-110">
+                  read{book.book_id}
+                </Link>
+              </div>
             </div>
-          </div>
-        ))}
+          ))
+        ) : (
+          <div>LOading...</div>
+        )}
       </div>
     </div>
   );

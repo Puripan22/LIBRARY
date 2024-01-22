@@ -42,6 +42,7 @@ const book_table = async (req, res) => {
         book_detail.title,
         book_detail.imageUrls,
         book_detail.category,
+        book_detail.author,
         COUNT(*) AS volume
       FROM 
         book_detail
@@ -77,18 +78,37 @@ const book_edit = async(req,res)=>{
   }
 }
 
-const book_detail = async(req,res)=>{
+const book_detail = async (req, res) => {
+  const db = await connection();
+
+  try {
+    const { book_id } = req.params;
+    const [bookDetail] = await db.query('SELECT * FROM book_detail WHERE book_id = ?', [book_id]);
+
+    if (!bookDetail.length) {
+      return res.status(404).json({ error: 'Book not found' });
+    }
+
+    return res.json(bookDetail);
+  } catch (error) {
+    console.error('Fetching detail error', error);
+    return res.status(500).json({ error: 'Error fetching book detail' });
+  } finally {
+    // Close the database connection if needed
+    // db.close();
+  }
+};
+
+const dashboard = async(req,res)=>{
   const db = await connection()
   try {
-    const {book_id} = req.params
-    const [book_detail] = await db.query(`SELECT * FROM book_detail WHERE book_id='${book_id}'`)
-    
-    return res.json(book_detail)
+    const [countBook] = await db.query(`SELECT COUNT(isbn) FROM book_isbn;`)
+    const [countBooking] = await db.query(`SELECT COUNT(status) FROM booking WHERE status = 'booking';`)
+    return res.json({countBook,countBooking})
   } catch (error) {
-    console.error("Fecthing detail error ",error)
-    return res.status(500).json({error:"Error book detail"})
+    console.error('Fetching detail error', error);
+    return res.status(500).json({ error: 'Error fetching book detail' });
   }
 }
 
-
-module.exports = { upload ,book_table,book_edit,book_detail};
+module.exports = { upload ,book_table,book_edit,book_detail,dashboard};

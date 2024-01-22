@@ -1,5 +1,6 @@
 import React from "react";
 import Rating from "./Rating";
+import { Link } from "react-router-dom";
 
 function Card_Book_of_the_day() {
   return (
@@ -26,12 +27,12 @@ function Card_Book_of_the_day() {
             with the appearance of Voldemort's symbol, the "Dark Mark" in the
             sky, which causes a frenzy across the magical community.
           </p>
-          <a
-            href="/book_detail"
+          <Link
+           to={"/book_detail/1"}
             className=" bg-orange-400 p-2 w-1/4 rounded-md hover:scale-110 text-center"
           >
             detail
-          </a>
+          </Link>
         </div>
       </div>
     </div>
