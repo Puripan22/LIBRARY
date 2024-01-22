@@ -1,8 +1,21 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Chart1 from "../components/Chart1";
-
+import { useEffect } from "react";
+import axios from 'axios'
+import { useState } from "react";
 function Dashboard() {
+  const [data, setData] = useState({ countBooking: 0, countBook: 0 });
+  useEffect(()=>{
+    const fetchData = async()=>{
+      const response = await axios.get('http://localhost:8080/api/countBook')
+      setData({
+        countBook: response.data.countBook[0]['COUNT(isbn)'],
+        countBooking: response.data.countBooking[0]['COUNT(status)']
+      });
+    }
+    fetchData()
+  },[])
   return (
     <div className="flex h-screen w-screen ">
       <Navbar />
@@ -35,7 +48,7 @@ function Dashboard() {
                     <h3 className=" text-xl pt-8 text-white">
                       จำนวนหนังสือที่ถูกยืม
                     </h3>
-                    <h6 className="text-3xl pt-12 text-white">9999 เล่ม</h6>
+                    <h6 className="text-3xl pt-12 text-white">{data.countBooking} เล่ม</h6>
                   </div>
                   <div className="h-full w-1/2 pt-8">
                     <svg
@@ -56,7 +69,7 @@ function Dashboard() {
                 <div className=" h-full w-1/4 rounded-lg flex border border-solid border-black  bg-gradient-to-r from-green-200 to-green-400 ">
                   <div className="flex flex-col w-full h-full">
                     <h3 className="text-xl pt-8 text-white">จำนวนหนังสือ</h3>
-                    <h6 className="text-3xl pt-12 text-white">9999 เล่ม</h6>
+                    <h6 className="text-3xl pt-12 text-white">{data.countBook}เล่ม</h6>
                   </div>
                   <div className="h-full w-1/2 pt-8">
                     <svg

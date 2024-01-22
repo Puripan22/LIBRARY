@@ -99,6 +99,16 @@ const book_detail = async (req, res) => {
   }
 };
 
+const dashboard = async(req,res)=>{
+  const db = await connection()
+  try {
+    const [countBook] = await db.query(`SELECT COUNT(isbn) FROM book_isbn;`)
+    const [countBooking] = await db.query(`SELECT COUNT(status) FROM booking WHERE status = 'booking';`)
+    return res.json({countBook,countBooking})
+  } catch (error) {
+    console.error('Fetching detail error', error);
+    return res.status(500).json({ error: 'Error fetching book detail' });
+  }
+}
 
-
-module.exports = { upload ,book_table,book_edit,book_detail};
+module.exports = { upload ,book_table,book_edit,book_detail,dashboard};
