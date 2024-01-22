@@ -26,7 +26,7 @@ function Card_Popular_books() {
   ];
 
   return (
-    <div className=" bg-green-400 h-full w-full flex flex-col border border-gray-300">
+    <div className=" bg-gray-50 dark:bg-gray-800 h-full w-full flex flex-col ">
       <p className="p-2 font-bold">Popular Book</p>
       <div className=" w-full h-full flex gap-x-4 p-2">
         {data.map((book, index) => (

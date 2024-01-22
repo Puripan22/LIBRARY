@@ -16,7 +16,7 @@ export default function Card_history(props) {
               {book.author}
           </h6>
           </div>*/
-    <div className=" w-screen h-screen flex flex-col pt-4 ">
+    <div className=" w-screen h-screen flex flex-col pt-4  ">
       <div className=" w-full h-full flex flex-col border-2 border-solid border-blue-200 border-spacing-2 rounded-lg ">
         {data.map((book, index) => (
           <div
