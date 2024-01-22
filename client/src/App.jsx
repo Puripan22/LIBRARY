@@ -20,18 +20,18 @@ function App() {
         <Route
           path="/bookmark"
           element={
-            // <Middleware>
+            <Middleware>
               <Bookmark />
-            // </Middleware>
+            </Middleware>
           }
         />
         <Route path="/category" element={<Category />} />
         <Route
           path="/history"
           element={
-            // <Middleware>
+            <Middleware>
               <History />
-            // </Middleware>
+            </Middleware>
           }
         />
         <Route
