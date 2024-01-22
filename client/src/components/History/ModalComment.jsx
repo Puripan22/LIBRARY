@@ -56,38 +56,31 @@ const handleClick =async(e)=>{
               key={index}
             >
               <footer className="flex justify-between items-center mb-2">
-                <div className="flex items-center">
+                <div className="flex flex-col items-center">
                   <div className="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white font-semibold">
                     <img
-                      className="mr-2 w-6 h-6 rounded-full"
+                      className="mr-2 w-8 h-8 rounded-full"
                       src="https://avatars.githubusercontent.com/u/110112184?s=400&u=2075971169db214cc42d7ec57c4404375f367e11&v=4"
                       alt=""
                     />
+                    <div>
                     {data.name}
-                  </div>
-                  <div className="text-sm text-gray-600 dark:text-gray-400">
+                    <div className="text-sm text-gray-600 dark:text-gray-400">
                     {new Date(data.comment_timestamp).toLocaleString()}
                   </div>
+                  
+                    </div>
+                    
+                  </div>
+                  
                 </div>
                 <button
                   id="dropdownComment1Button"
                   data-dropdown-toggle="dropdownComment1"
-                  className="inline-flex items-center p-2 text-sm font-medium text-center text-gray-500 dark:text-gray-400 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                  className="gap-x-16 inline-flex items-center p-2 text-sm font-medium text-center text-gray-500 dark:text-gray-400 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                   type="button"
                 >
-                  <svg
-                    className="w-4 h-4"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="currentColor"
-                    viewBox="0 0 16 3"
-                  >
-                    <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z" />
-                  </svg>
-                </button>
-              </footer>
-              <div className="text-gray-500 dark:text-gray-400">
-                <div className="flex items-center">
+                  <div className="flex items-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -103,6 +96,19 @@ const handleClick =async(e)=>{
 
                   {data.rating}
                 </div>
+                  <svg
+                    className="w-4 h-4"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 16 3"
+                  >
+                    <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z" />
+                  </svg>
+                </button>
+              </footer>
+              <div className="text-gray-500 dark:text-gray-400 line-clamp-4">
+                
                 {data.comment}
               </div>
               <div className="flex items-center mt-4 space-x-4">

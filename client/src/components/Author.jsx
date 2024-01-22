@@ -60,10 +60,6 @@ function Author() {
       setCount(3);
     }
   };
-
-  useEffect(() => {
-    console.log("Count:", count);
-  }, [count]);
   const [openModal, setOpenModal] = useState(false);
   return (
     <div className="bg-gray-50 dark:bg-gray-800 w-full h-1/2 overflow-hidden flex-col p-2">
