@@ -34,4 +34,17 @@ const getComment = async (req, res) => {
     }
 };
 
-module.exports = { getComment };
+const postComment=async(req,res)=>{
+    const db = await connection()
+    const {book_id,student_id,comment,rating} = req.body
+    try {
+        const [newComment] = await db.query(`INSERT INTO book_comments(book_id,student_id,comment) VALUES(?,?,?)`,[book_id,student_id,comment])
+        const [newRating] = await db.query(`INSERT INTO book_ratings(book_id,student_id,rating) VALUES(?,?,?)`,[book_id,student_id,rating])
+
+        return res.json({newComment,newRating})
+    } catch (error) {
+        console.error("Error in postComment:",error)
+        return res.status(500).json({error:"Internal Server Error"})
+    }
+}
+module.exports = { getComment ,postComment};
