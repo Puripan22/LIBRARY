@@ -66,7 +66,7 @@ function Author() {
   }, [count]);
   const [openModal, setOpenModal] = useState(false);
   return (
-    <div className="bg-red-300 w-full h-1/2 overflow-hidden flex-col p-2">
+    <div className="bg-gray-50 dark:bg-gray-800 w-full h-1/2 overflow-hidden flex-col p-2">
       <div className=" flex justify-between px-2 font-bold">
         Inspiration
         <div className="flex gap-x-2">

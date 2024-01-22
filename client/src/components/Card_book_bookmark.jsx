@@ -39,7 +39,7 @@ export default function Card_book_category(props) {
     console.log("Count:", count);
   }, [count]);
   return (
-    <div className=" bg-green-400 h-full w-full flex flex-col border border-gray-300 overflow-hidden">
+    <div className=" bg-gray-100 dark:bg-gray-800 h-full w-full flex flex-col border border-gray-300 overflow-hidden">
       <div className="flex">
         <p className="p-2 font-bold w-1/2">{category}</p>
         <div className=" flex justify-end px-2 font-bold w-1/2">

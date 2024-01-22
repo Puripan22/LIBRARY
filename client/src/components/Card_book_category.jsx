@@ -38,7 +38,7 @@ export default function Card_book_category(props) {
   };
 
   return (
-    <div className=" bg-green-400 h-full w-full flex flex-col border border-gray-300 overflow-hidden">
+    <div className=" bg-gray-100 dark:bg-gray-800 h-full w-full flex flex-col border  border-gray-300 overflow-hidden">
       <div className="flex">
         <p className="p-2 font-bold w-1/2">{category}</p>
         <div className=" flex justify-end px-2 font-bold w-1/2">
@@ -100,7 +100,7 @@ export default function Card_book_category(props) {
                   {book.title}
                 </h6>
                 <p>{book.author}</p>
-                <Link to={`/book_detail/${book.book_id}`} className=" bg-orange-400 p-2 w-1/2 rounded-md hover:scale-110">
+                <Link to={`/book_detail/${book.book_id}`} className=" bg-orange-400 p-2 w-1/2 rounded-md hover:scale-110 text-center">
                   read{book.book_id}
                 </Link>
               </div>

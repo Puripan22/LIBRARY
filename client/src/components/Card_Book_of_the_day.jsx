@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Card_Book_of_the_day() {
   return (
-    <div className="p-2 w-2/3 h-full bg-red-300">
+    <div className="p-2 w-2/3 h-full bg-gray-50 dark:bg-gray-800">
       <div className="w-full h-full flex  items-center bg-white border-2 border-gray-200 rounded-lg shadow p-5">
         <img
           className="object-cover w-full rounded-lg h-full hover:scale-110"
