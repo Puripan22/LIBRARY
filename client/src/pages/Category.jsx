@@ -32,7 +32,7 @@ function Category() {
   return (
     <div className="flex h-screen w-screen fixed">
       <Navbar />
-      <div className="flex flex-col h-full w-full overflow-y-scroll">
+      <div className="flex flex-col h-full w-full overflow-y-scroll ">
         {categoryList ? (
           categoryList.map((category, index) => (
             <div className="h-1/3 w-full " key={index}>
