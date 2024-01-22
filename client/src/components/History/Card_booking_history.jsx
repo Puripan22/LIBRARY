@@ -48,21 +48,21 @@ const handleCLick =(book)=>{
     }
   };
   return (
-    <div className="h-full w-full flex">
-      <div className="flex flex-col overflow-x-hidden overflow-y-auto w-full p-4">
+    <div className=" h-5/6 w-full flex">
+      <div className="flex flex-col overflow-x-hidden overflow-y-auto w-full px-4">
         <div className="p-2 font-bold">History</div>
-        <div className="w-full h-full flex flex-col ">
+        <div className="w-full h-full flex flex-col gap-y-5">
           {history ? (
             history.length > 0 ? (
               history.map((book, index) => (
                 <div
                   key={index}
-                  className="w-full h-1/5 border-2 border-solid border-blue-200 border-spacing-2 rounded-lg"
+                  className="w-full h-1/4 border-2 border-solid border-blue-200 border-spacing-2 rounded-lg hover:border-gray-500"
                 >
-                  <div className=" h-4/5 w-full flex  bg-white border-2  rounded-tl-lg rounded-tr-lg p-2 hover:scale-105 border-solid border-blue-200 border-spacing-2 border-t-0 border-l-0 border-r-0 ">
+                  <div className=" h-2/3 w-full flex  bg-white border-2  rounded-tl-lg rounded-tr-lg p-2  border-solid border-blue-200 border-spacing-2 border-t-0 border-l-0 border-r-0 ">
                     <div className=" flex w-1/2 items-center pl-11">
                       <img
-                        className="object-cover h-28 hover:scale-125 rounded-md"
+                        className="object-cover h-28 hover:scale-110 rounded-md transition duration-700 ease-in-out"
                         src={book.imageUrls}
                         alt=""
                       />
@@ -109,7 +109,7 @@ const handleCLick =(book)=>{
                       </div>
                     </div>
                   </div>
-                  <div className=" h-1/5 w-full flex  ">
+                  <div className=" h-1/3 w-full flex  ">
                     <div
                       onClick={()=>handleCLick(book)}
                       className=" h-full flex w-1/2 justify-center items-center  cursor-pointer hover:scale-105 "

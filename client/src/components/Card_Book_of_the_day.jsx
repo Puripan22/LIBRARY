@@ -12,7 +12,7 @@ function Card_Book_of_the_day() {
           alt=""
         />
         <div className="flex flex-col justify-between pl-5 leading-normal h-full">
-          <h7 className="font-bold">Book of the Day</h7>
+          <p className="font-bold">Book of the Day</p>
           <Rating />
           <h6 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             Harry Potter and the Goblet of Fire

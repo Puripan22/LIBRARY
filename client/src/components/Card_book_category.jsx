@@ -90,7 +90,7 @@ export default function Card_book_category(props) {
               className=" h-full w-1/4 flex justify-center flex-shrink-0 items-center bg-white border-2 border-gray-200 rounded-lg shadow p-2"
             >
               <img
-                className="object-cover rounded-lg h-36 hover:scale-110"
+                className="object-cover rounded-lg h-36 hover:scale-110 transition duration-700 ease-in-out"
                 src={book.imageUrls}
                 alt=""
               />
@@ -100,9 +100,10 @@ export default function Card_book_category(props) {
                   {book.title}
                 </h6>
                 <p>{book.author}</p>
-                <Link to={`/book_detail/${book.book_id}`} className=" bg-orange-400 p-2 w-1/2 rounded-md hover:scale-110 text-center">
-                  read{book.book_id}
+                <Link to={`/book_detail/${book.book_id}`} className=" bg-[#ffffff] py-2 w-1/2 border rounded-md hover:scale-105 text-center hover:bg-[#000000] transition duration-700 ease-in-out">
+                  <p className=" text-[#000000] hover:text-[#ffffff] w-full h-full">Read</p>
                 </Link>
+                
               </div>
             </div>
           ))
