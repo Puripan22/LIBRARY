@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 function Search() {
+
   // State to track the visibility of the dropdown
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -8,6 +9,7 @@ function Search() {
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
+
   return (
     <div className="w-full z-10 flex h-14">
       
