@@ -87,7 +87,7 @@ export default function Card_book_category(props) {
         {data.map((book, index) => (
           <div
             key={index}
-            className=" h-full w-96 flex justify-center items-center flex-shrink-0 bg-white border-2 border-gray-200 rounded-lg shadow p-2"
+            className=" h-full w-1/4 flex justify-center items-center flex-shrink-0 bg-white border-2 border-gray-200 rounded-lg shadow p-2"
           >
             <img
               className="object-cover rounded-lg h-36 hover:scale-110"
